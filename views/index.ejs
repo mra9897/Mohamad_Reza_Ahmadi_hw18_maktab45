@@ -1,0 +1,77 @@
+<%- include("./partials/top") %>
+
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">Registration</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dicta eligendi enim
+                            ipsam iure maiores, quaerat quasi quisquam quos, repellendus repudiandae sint unde
+                            voluptatibus. Eius harum ipsa nulla recusandae voluptas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border bg-white">
+                <h4 class="pb-4">Please fill with your details</h4>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input id="name" placeholder="name" class="form-control" type="text" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select id="gender" class="form-control" required>
+                                <option >Gender ...</option>
+                                <option value="male"> Male</option>
+                                <option value="female"> Female</option>
+                                <option value="other"> other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input id="username" autocomplete="off" placeholder="username" class="form-control" type="text" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input id="password" placeholder="password" class="form-control" required="required"
+                                   type="password">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input id="rePassword" placeholder="rePassword" class="form-control" required="required"
+                                   type="password" value="Ab123456!">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="invalidCheck2">
+                                        <small>By clicking Submit, you agree to our Terms & Conditions, Visitor
+                                            Agreement and Privacy Policy.</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-3">
+                        <button type="button" id="submit" class="btn btn-danger">Register</button>
+                    </div>
+                    <div class="form-row">
+                        <div class="text-danger" id="log" style="display: none"></div>
+                    </div>
+                    <a href="/login">Do you have an account?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("./partials/footer", {js:['register']}) %>

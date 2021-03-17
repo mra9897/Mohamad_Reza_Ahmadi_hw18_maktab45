@@ -1,0 +1,25 @@
+<%-include("./partials/top")%>
+<div class="d-flex">
+    <div class="alert" id="notification"></div>
+</div>
+<div class="card">
+    <div class="title">Login to dashboard</div>
+    <p class="text-danger" id="error-text"></p>
+    <form id="loginForm" action="/admin" method="POST">
+        <div class="login-container">
+            <i class="fa fa-user"></i>
+            <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="require" data-target="username" hidden>require*</div>
+        <div class="login-container">
+            <i class="fa fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="password">
+        </div>
+        <div class="require" data-target="password" hidden>require*</div>
+        <input type="button" id="login" value="login">
+    </form>
+    <div class="title">
+        <a href="/">Create new account</a>
+    </div>
+</div>
+<%-include("./partials/footer")%>
