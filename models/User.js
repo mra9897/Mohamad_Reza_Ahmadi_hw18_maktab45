@@ -12,7 +12,6 @@ const UserSchema = new schema({
     name: {
         ...defaultSetting,
         minlength: 3,
-        unique: true
     },
     gender: defaultSetting,
     email: {
