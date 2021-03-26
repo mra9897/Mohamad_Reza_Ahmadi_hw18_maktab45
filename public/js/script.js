@@ -81,7 +81,7 @@ $(function () {
         if (newPassword !== reNewPassword)
             return alert("new password and it's repeat is not match");
         $.ajax({
-            url: "user/update-password",
+            url: "/user/update-password",
             data: JSON.stringify({oldPassword, newPassword, reNewPassword}),
             method: "PATCH",
             contentType: "application/json",
