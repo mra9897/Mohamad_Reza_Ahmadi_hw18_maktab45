@@ -56,7 +56,9 @@ $(function () {
                         alert("user exist, you can login or choose another username");
                 },
                 error: (data) => {
-                    console.log(data);
+                    let errors = "";
+                    data.responseJSON.errors.map(err => errors += (err+"<br>"));
+                    $('#log').html(errors).show();
                 }
             });
         }else{
