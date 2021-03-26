@@ -20,12 +20,6 @@ exports.updateValidationRules = () => [
     check('password', 'password must have more than 5 character')
         .notEmpty().isLength({min: 4}).trim().escape().optional()
 ];
-exports.loginValidationRules = () => [
-    check('username', 'user name must have more than 3 character')
-        .notEmpty().isLength({min: 4}).trim().escape(),
-    check('password', 'password must have more than 7 character')
-        .notEmpty().isLength({min: 8}).trim().escape()
-];
 exports.updatePasswordValidation = () => [
     check('newPassword').custom((val, {req}) => {
         if (val !== req.body.reNewPassword)
